@@ -1,0 +1,65 @@
+power = cv^2 freq
+
+at lower operating freq and hence power
+
+concurrency: progressing at same time, e.g webserver
+
+parallelism: executing sametime, e.g:
+
+openMP compiler directive:
+#pragma omp construct [clause[clause]]
+
+e.g. #pragma omp parallel num_threads(4)
+
+compilation:
+
+in linux 
+
+gcc -fopenmp foo.c
+
+for bash shell;
+
+export OMP _NUM_THREADS=4
+
+./a.out
+
+
+H/W:
+
+openMP assumes shared memory computer: any computer composed of multiplr processing elements that share an address space
+
+There are two classes:
+
+1) symmetric Multiprocessor (SMP): a shared address space with equal time  access for each processor, 
+OS treats each processor same way
+assumes no special blocks in memory, all mmeory is equally accessible
+
+2) Non Uniform Address Space Multiprocessor(NUMA): Differnt memory segments have disffernt cost, eg near memory, far memory
+acces time in non uinfotm
+
+
+
+Modern processors are not SMP due to cash considerations
+
+A process has its own
+Stack(SP,PC, reg), text(text of program), data and heap(mangible memory)
+
+Modern OS decomposes process stack into threads processes
+
+threads: light weight processes, 
+that share process state among multiple threads
+common text data and heap
+
+
+
+Race condition: programs outcome changes with time
+
+To control use synchronization 
+
+ 
+
+
+
+
+
+
